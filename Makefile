@@ -1,8 +1,8 @@
 install: ## Setup development environment
-	bin/setup
+	bin/setup.1
 
 run: ## Start the application (web, jobs et webpack)
-	foreman s -f Procfile.dev
+	bin/setup.2 && foreman s -f Procfile.dev
 
 lint: lint_rubocop lint_slim lint_brakeman ## Run all linters
 
