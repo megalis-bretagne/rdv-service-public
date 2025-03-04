@@ -16,4 +16,4 @@ RUN apt update && \
     corepack enable && \
     make install
 
-CMD [ "tail", "-f", "/dev/null" ]
+CMD [ "make", "run" ]
