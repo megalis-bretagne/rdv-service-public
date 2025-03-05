@@ -11,6 +11,9 @@ services:
       - 3000:3000
     networks:
       - rsp-network
+    env_file:
+      - path: .env
+        required: true
     
   db:
     image: postgres:17.4-alpine3.21

@@ -18,7 +18,7 @@ Un fichier compose _rdv-service-public.yml_ est également présent dans le dire
 
 ### Configuration du service
 
-Le service se configure dans le fichier _.env_ à la racine du projet. S'il n'existe pas, recopier _.env.sample_ dans .env.
+Le service se configure dans le fichier _.env_, qui doit être présent dans le directory docker. S'il n'existe pas, recopier _.env.sample_ dans _docker/.env_.
 
 Les variables _POSTGRE\_*_ suivantes doivent être configurées:
 ```
@@ -50,7 +50,7 @@ Une variable liée à scalingo doit être renseigné pour éviter la configurati
 La composition Docker peut être démarrée ainsi, depuis la racine du projet:
 
 ```
-docker compose -f docker/rdv-service-public.yml --env-file .env up
+docker compose -f docker/rdv-service-public.yml --env-file ./docker/.env up
 ```
 
 Une fois le démarrage fait, le service _rdv-service-public_ est disponible sur _http://localhost:3000_
